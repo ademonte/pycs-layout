@@ -12,7 +12,7 @@ html{
 
 .legend{
     background-color: #000;
-    padding: 20px 0;
+    padding: 10px 0;
     position: absolute;
     top: -120px;
     width: 100%;
@@ -27,6 +27,10 @@ html{
     -moz-transition-duration: 0.3s;
     transition: all;
     transition-duration: 0.3s;
+}
+
+.picture:hover{
+    cursor: pointer;
 }
 
 .picture:hover .legend{

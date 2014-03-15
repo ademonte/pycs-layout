@@ -113,11 +113,13 @@ http://www.techbits.de/2011/10/25/building-a-google-plus-inspired-image-gallery/
 
 	var showImages = function(imageContainer, realItems) {
 	    // reduce width by 1px due to layout problem in IE
-	    var containerWidth = imageContainer.width() - 1;
+	    // reduce width by 15px because chrome do some weird things
+	    // whend the scrollbar is displayed
+	    var containerWidth = imageContainer.width() - 15;
 	    
 	    // Make a copy of the array
-	    var items = realItems.slice();
-	    
+	    var items = $.extend(true, [], realItems);
+
 	    // calculate rows of images which each row fitting into
 	    // the specified windowWidth.
 	    var rows = [];
@@ -140,21 +142,19 @@ http://www.techbits.de/2011/10/25/building-a-google-plus-inspired-image-gallery/
 		     	 "margin-top": "0px",
 		     });
 		    imageContainer.append($(item));
-		    $(item).animate({opacity: 1}, 500);
+
 	    	}
 	    }
 	};
 
 	var $this = $(this);
 
+	showImages($(this), $(settings.pictureContainer));
         $(window).resize(function() {
-	    showImages($this, $.makeArray($(settings.pictureContainer)));
+	    showImages($this, $(settings.pictureContainer));
         });
-	showImages($(this), $.makeArray($(settings.pictureContainer)));
+
 	return $this;
-	// return this.each(function(){
-	//     showImages($(this), $.makeArray($(settings.pictureContainer)));
-	// });
     };
 
 }(jQuery));
