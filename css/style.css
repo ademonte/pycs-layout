@@ -1,4 +1,33 @@
 html{
-    font-family: 'Alegreya', serif;
-    font-weight: 400;
+    color: #fff;
+    background-color: #413E4A;
+}
+
+.picture{
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+.legend{
+    background-color: #000;
+    padding: 20px 0;
+    position: absolute;
+    top: -60px;
+    width: 100%;
+    opacity: 0.8;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-align: center;
+
+    -webkit-transition: all;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition: all;
+    -moz-transition-duration: 0.3s;
+    transition: all;
+    transition-duration: 0.3s;
+}
+
+.picture:hover .legend{
+    top:0px;
 }
