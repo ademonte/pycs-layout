@@ -7,13 +7,14 @@ html{
     overflow: hidden;
     position: relative;
     display: inline-block;
+    margin: 0 3px;
 }
 
 .legend{
     background-color: #000;
     padding: 20px 0;
     position: absolute;
-    top: -60px;
+    top: -120px;
     width: 100%;
     opacity: 0.8;
     font-size: 1.1em;

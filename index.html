@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link href='http://fonts.googleapis.com/css?family=Alegreya:400,900,700' 
 	  rel='stylesheet' type='text/css'>
+    <script src="jquery-1.11.0.min.js"></script>
     <script src="pycs-layout.jquery.js"></script>
   </head>
   <body>
@@ -18,59 +19,59 @@
 	
       <figure class="gallery">
 	<div class="picture" data-width="350" data-height="150">
-	  <div class="legend">350x150 image</div>
+	  <div class="legend">1- 350x150 image</div>
 	  <img src="http://placehold.it/350x150/73626E/FFFFFF" 	       
 	       alt="350x150 image" title="350x150 image"/>
 	</div>
-	<div class="picture" data-width="150" data-height="300">
-	  <div class="legend">150x300 image</div>
-	  <img src="http://placehold.it/150x300/F0B49E/FFFFFF" 	       
-	       alt="150x300 image" title="150x300 image"/>
+	<div class="picture" data-width="150" data-height="150">
+	  <div class="legend">2- 150x150 image</div>
+	  <img src="http://placehold.it/150x150/F0B49E/FFFFFF" 	       
+	       alt="150x150 image" title="150x150 image"/>
 	</div>
-	<div class="picture" data-width="200" data-height="200">
-	  <div class="legend">200x200 image</div>
-	  <img src="http://placehold.it/200x200/F7E4BE/FFFFFF" 	       
-	       alt="200x200 image" title="200x200 image"/>
-	</div>
-	<div class="picture" data-width="500" data-height="310">
-	  <div class="legend">500x310 image</div>
-	  <img src="http://placehold.it/500x310/B38184/FFFFFF" 	       
-	       alt="500x310 image" title="500x310 image"/>
+	<div class="picture" data-width="500" data-height="150">
+	  <div class="legend">3- 500x310 image</div>
+	  <img src="http://placehold.it/500x150/B38184/FFFFFF" 	       
+	       alt="500x150 image" title="500x150 image"/>
 	</div>
 	<div class="picture" data-width="400" data-height="150">
-	  <div class="legend">400x150 image</div>
+	  <div class="legend">4- 400x150 image</div>
 	  <img src="http://placehold.it/400x150/45ADA8/FFFFFF" 	       
 	       alt="400x150 image" title="400x150 image"/>
 	</div>
-	<div class="picture" data-width="320" data-height="500">
-	  <div class="legend">320x500 image</div>
-	  <img src="http://placehold.it/320x500/F0B49E/FFFFFF" 	       
-	       alt="320x500 image" title="320x500 image"/>
+	<div class="picture" data-width="320" data-height="150">
+	  <div class="legend">5- 320x500 image</div>
+	  <img src="http://placehold.it/320x150/F0B49E/FFFFFF" 	       
+	       alt="320x150 image" title="320x150 image"/>
 	</div>
 	<div class="picture" data-width="150" data-height="150">
-	  <div class="legend">150x150 image</div>
+	  <div class="legend">6- 150x150 image</div>
 	  <img src="http://placehold.it/150x150/B38184/FFFFFF" 	       
 	       alt="150x150 image" title="150x150 image"/>
 	</div>
-	<div class="picture" data-width="150" data-height="300">
-	  <div class="legend">150x300 image</div>
-	  <img src="http://placehold.it/150x300/73626E/FFFFFF" 	       
-	       alt="150x300 image" title="150x300 image"/>
+	<div class="picture" data-width="150" data-height="150">
+	  <div class="legend">7- 150x300 image</div>
+	  <img src="http://placehold.it/150x150/73626E/FFFFFF" 	       
+	       alt="150x150 image" title="150x150 image"/>
 	</div>
-	<div class="picture" data-width="500" data-height="310">
-	  <div class="legend">500x310 image</div>
-	  <img src="http://placehold.it/500x310/F7E4BE/FFFFFF" 	       
-	       alt="500x310 image" title="500x310 image"/>
+	<div class="picture" data-width="500" data-height="150">
+	  <div class="legend">8- 500x310 image</div>
+	  <img src="http://placehold.it/500x150/F7E4BE/FFFFFF" 	       
+	       alt="500x150 image" title="500x150 image"/>
 	</div>
 	<div class="picture" data-width="400" data-height="150">
-	  <div class="legend">400x150 image</div>
+	  <div class="legend">9- 400x150 image</div>
 	  <img src="http://placehold.it/400x150/F0B49E/FFFFFF" 
 	       alt="400x150 image" title="400x150 image"/>
 	</div>
 	<div class="picture" data-width="350" data-height="150">
-	  <div class="legend">350x150 image</div>
+	  <div class="legend">10- 350x150 image</div>
 	  <img src="http://placehold.it/350x150/73626E/FFFFFF" 	       
 	       alt="350x150 image" title="350x150 image"/>
+	</div>
+	<div class="picture" data-width="200" data-height="150">
+	  <div class="legend">11- 200x150 image</div>
+	  <img src="http://placehold.it/200x150/F7E4BE/FFFFFF" 	       
+	       alt="200x150 image" title="200x150 image"/>
 	</div>
 	
         <figcaption>Pycs-layout in action</figcaption>
@@ -81,7 +82,9 @@
 
 
     <script>
-
+      $(document).ready( function() {
+          $('.gallery').pycsLayout();
+      });
     </script>
 
   </body>
