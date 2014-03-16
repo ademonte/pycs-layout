@@ -300,12 +300,18 @@
 
 	var $this = $(this);
 
-	$(settings.pictureContainer).css("opacity", "0");
-	showImages($(this), $(settings.pictureContainer));
-        $(window).resize(function() {
-	    showImages($this, $(settings.pictureContainer));
-        });
-
+	if($(this).length > 0){
+	    $(this).each(function(){
+		$(settings.pictureContainer, $(this)).css("opacity", "0");
+		showImages($(this), $(settings.pictureContainer, $(this)));
+	    });
+	    
+	    $(window).resize(function() {
+		$this.each(function(){		    
+		    showImages($(this), $(settings.pictureContainer, $(this)));
+		});
+             });
+	}
 	return $this;
     };
 

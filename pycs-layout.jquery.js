@@ -299,12 +299,12 @@
 	};
 
 	var $this = $(this);
-
-	$(settings.pictureContainer).css("opacity", "0");
-	showImages($(this), $(settings.pictureContainer));
-        $(window).resize(function() {
-	    showImages($this, $(settings.pictureContainer));
-        });
+	console.log($this);
+	// $(settings.pictureContainer).css("opacity", "0");
+	// showImages($(this), $(settings.pictureContainer));
+        // $(window).resize(function() {
+	//     showImages($this, $(settings.pictureContainer));
+        // });
 
 	return $this;
     };

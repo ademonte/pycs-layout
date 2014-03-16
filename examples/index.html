@@ -16,9 +16,17 @@
   <body>
     
     <main role="main">
-	<h1>Pycs-layout</h1>
+
+      <nav>
+	<span><a href="index.html">Variable sizes</a></span>
+	<span><a href="example2.html">Fixed height</a></span>
+	<span><a href="example3.html">Multiple galleries</a></span>
+      </nav>
+
+      <h1>Pycs-layout</h1>
+
       <div class="wrapper">
-      <figure class="gallery clearfix">
+      <figure class="gallery-variable clearfix">
     
 
 	<div class="picture" data-width="1000" data-height="740">
@@ -166,7 +174,6 @@
           <img src="http://placehold.it/1000x663/B38184/FFFFFF" 	       
 	       alt="1000x663 image" title="1000x663 image"/>
 	</div>
-	
 
 	<div class="picture" data-width="400" data-height="600">
           <div class="legend">21- 400x600 image</div>
@@ -235,7 +242,8 @@
     </main>
     <script>
       $(document).ready( function() {
-          $('.gallery').pycsLayout({gutter: 6, idealHeight: 200});
+          $('.gallery-variable').pycsLayout({gutter: 6, idealHeight: 200});
+          $('.gallery-fixed').pycsLayout({gutter: 6, preserveHeight: true});
       });
     </script>
   </body>
