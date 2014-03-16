@@ -226,7 +226,7 @@
 	    var totalWidth = 0;
 	    var weights = get_aspect_ratios(items);
 	    var rows_number = 0;
-	    var rows = []
+	    var rows = [];
 
 	    for(var i=0; i<items.length; i++){
 		totalWidth += (parseInt($(items[i]).attr("data-vwidth")) + 
@@ -234,27 +234,29 @@
 	    }
 	    
 	    rows_number = Math.round(totalWidth / containerWidth);
-	    if(rows_number > 1){
-		partition = linear_partition(weights, rows_number);
-		var index = 0;
-		for(var i=0; i<partition.length; i++){
-		    rows[i] = [];
-		    var summed_ratios = 0;
-		    for(var j=0; j<partition[i].length; j++){
-			summed_ratios += parseInt($(items[index]).attr("data-aspect-ratio"));
-			rows[i][j] = items[index];
-			index++;
-		    }
-		    for(var j=0; j<rows[i].length; j++){
-			var vwidth = containerWidth / summed_ratios;
-			vwidth *= parseInt($(rows[i][j]).attr("data-aspect-ratio"));
-			vwidth = parseInt(vwidth) - settings.gutter;
-			var vheight = parseInt(((containerWidth-rows[i].length*settings.gutter) / summed_ratios));
-			$(rows[i][j]).attr("data-vwidth", vwidth);
-			$(rows[i][j]).attr("data-vheight", vheight);
-		    }
+
+	    partition = linear_partition(weights, rows_number);
+
+	    /* build the rows and resize the images */
+	    var index = 0;
+	    for(var i=0; i<partition.length; i++){
+		rows[i] = [];		    
+		var summed_ratios = 0;
+		for(var j=0; j<partition[i].length; j++){
+		    summed_ratios += parseFloat($(items[index]).attr("data-aspect-ratio"));
+		    rows[i][j] = items[index];
+		    index++;
+		}
+		for(var j=0; j<rows[i].length; j++){
+		    var vwidth = containerWidth / summed_ratios;
+		    vwidth *= parseFloat($(rows[i][j]).attr("data-aspect-ratio"));
+		    vwidth = parseInt(vwidth) - settings.gutter;
+		    var vheight = parseInt(((containerWidth-rows[i].length*settings.gutter) / summed_ratios));
+		    $(rows[i][j]).attr("data-vwidth", vwidth);
+		    $(rows[i][j]).attr("data-vheight", vheight);
 		}
 	    }
+	    
 	    return rows;
 	}
 
@@ -274,15 +276,15 @@
 		rows = chromatic(containerWidth, items);
 	    }
 
-	    
+	   
 	    for(var r in rows) {
-	    	for(var i in rows[r]) {
+	    	for(var i in rows[r]) {		    
 	    	    var item = rows[r][i];
 		    $(item).css({
 			"width": $(item).attr("data-vwidth") + "px",
 			"height": $(item).attr("data-vheight") + "px",
 			"margin": parseInt(settings.gutter/2) + "px",
-			
+			"float": "left"			
 		    });
 		     $('img', item).css({
 		     	 "width": $(item).attr("data-vwidth") + "px",

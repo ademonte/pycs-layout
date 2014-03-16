@@ -8,6 +8,31 @@
 html{
     color: #fff;
     background-color: #413E4A;
+    font-size: 100.01%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+  font-size: 1em;
+  line-height: 1.5;
+}
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+h1{
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    font-size: 2.5em;
+}
+.wrapper{
+    padding: 5px;
+    width: 85%;
+    background-color: #333;
+    margin: 0 auto;
 }
 .picture{
     overflow: hidden;
