@@ -185,11 +185,14 @@
 		ans = [];
 		while(k >= 0){
 		    var p = [];
-		    for(var i=solution[n-1][k]+1; i<n+1; i++){
-			p.push(seq[i]);
+		    if(n>0){
+			for(var i=solution[n-1][k]+1; i<n+1; i++){
+			    p.push(seq[i]);
+			}
+		    
+			ans = [p].concat(ans);
+			n = solution[n-1][k];
 		    }
-		    ans = [p].concat(ans);
-		    n = solution[n-1][k];
 		    k = k-1;
 		}
 		var p = [];
@@ -288,12 +291,14 @@
 		     	 "margin-top": "0px",
 		     });
 		    imageContainer.append($(item));
+		    $(item).animate({opacity: 1});
 	    	}
 	    }
 	};
 
 	var $this = $(this);
 
+	$(settings.pictureContainer).css("opacity", "0");
 	showImages($(this), $(settings.pictureContainer));
         $(window).resize(function() {
 	    showImages($this, $(settings.pictureContainer));

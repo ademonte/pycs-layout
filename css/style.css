@@ -13,7 +13,8 @@ html{
     overflow: hidden;
     position: relative;
     float: left;
-    margin-top: -5px;
+    margin: 2px;
+    margin-top: -2px;
 }
 .legend{
     background-color: #000;
@@ -32,6 +33,10 @@ html{
     -moz-transition-duration: 0.3s;
     transition: all;
     transition-duration: 0.3s;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
 }
 .picture:hover{
     cursor: pointer;
