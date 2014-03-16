@@ -288,8 +288,7 @@
 		    });
 		     $('img', item).css({
 		     	 "width": $(item).attr("data-vwidth") + "px",
-		     	 "height": $(item).attr("data-vheight") + "px",
-		     	 //"margin-left": "" + ($(item).attr("data-vx") ? (-$(item).attr("data-vx")) : 0) + "px",
+		     	 "height": $(item).attr("data-vheight") + "px",	
 		     	 "margin-top": "0px",
 		     });
 		    imageContainer.append($(item));
