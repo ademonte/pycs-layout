@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pycs-Layout</title>
-    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link href='http://fonts.googleapis.com/css?family=Alegreya:400,900,700' 
 	  rel='stylesheet' type='text/css'>
@@ -135,9 +134,6 @@
 	  <img src="http://placehold.it/150x150/73626E/FFFFFF" 	       
 	       alt="150x150 image" title="150x150 image"/>
 	</div>
-
-	
-        <figcaption>Pycs-layout in action</figcaption>
       </figure>
 	
 
@@ -146,7 +142,7 @@
 
     <script>
       $(document).ready( function() {
-          $('.gallery').pycsLayout();
+          $('.gallery').pycsLayout({gutter: 5});
       });
     </script>
 
