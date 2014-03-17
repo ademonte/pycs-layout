@@ -5,13 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pycs-Layout</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/foundation.min.css">
     <link rel="stylesheet" href="css/style.css" />
-    <link href='http://fonts.googleapis.com/css?family=Alegreya:400,900,700' 
-	  rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,900' 
-	  rel='stylesheet' type='text/css'>
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/pycs-layout.jquery.js"></script>
+    <script src="js/modernizr.min.js"></script>
   </head>
   <body>
     
@@ -23,10 +20,9 @@
 	<span><a href="example3.html">Multiple galleries</a></span>
       </nav>
 
-      <h1>Pycs-layout</h1>
 
-      <div class="wrapper">
-      <figure class="gallery-variable clearfix">
+      <div class="row">
+      <div class="small-12 columns panel radius gallery-variable gallery clearfix">
     
 
 	<div class="picture" data-width="1000" data-height="740">
@@ -237,12 +233,16 @@
 	       alt="1000x740 image" title="1000x740 image"/>
 	</div>
 	
-      </figure>
+      </div>
       </div>
     </main>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/pycs-layout.jquery.js"></script>
     <script>
       $(document).ready( function() {
-          $('.gallery-variable').pycsLayout({gutter: 6, idealHeight: 200});
+          $('.gallery-variable').pycsLayout({gutter: 6, idealHeight: 200,
+          animate: true});
           $('.gallery-fixed').pycsLayout({gutter: 6, preserveHeight: true});
       });
     </script>

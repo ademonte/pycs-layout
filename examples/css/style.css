@@ -1,36 +1,9 @@
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-html{
-    color: #fff;
-    background-color: #413E4A;
-    font-size: 100.01%;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
-body {
-  font-size: 1em;
-  line-height: 1.5;
-  font-family: 'Merriweather', serif;
-  text-align: center;
-}
-.clearfix:after { 
-   content: "."; 
-   visibility: hidden; 
-   display: block; 
-   height: 0; 
-   clear: both;
-}
 nav{
     display: block;
     position: fixed;
     width: 100%;
-    background-color: #222;
-    opacity: 0.9;
+    background-color: #333;
+    opacity: 1;
     padding: 10px;
     top: 0;
     left: 0;
@@ -77,34 +50,27 @@ nav span a{
 main{
     margin-top: 80px;
 }
-h1{
-    font-size: 2.5em;
-    color: #aaa;a
-}
-.wrapper{
-    padding: 5px;
-    width: 85%;
-    background-color: #333;
-    margin: 0 auto;
+.gallery{
+    background-color: #413E4A;
+    padding: 15px;
 }
 .picture{
     overflow: hidden;
     position: relative;
-    float: left;
-    margin: 2px;
+    float: left;  
     margin-top: -2px;
 }
 .legend{
-    background-color: #000;
+    background-color: #333;
     padding: 10px 0;
     position: absolute;
     top: -120px;
     width: 100%;
-    opacity: 0.8;
+    opacity: 1;
     font-size: 0.9em;
     font-weight: 700;
     text-align: center;
-
+    color: #fff;
     -webkit-transition: all;
     -webkit-transition-duration: 0.3s;
     -moz-transition: all;

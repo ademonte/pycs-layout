@@ -7,6 +7,7 @@
 	    preserveHeight: false,
 	    idealHeight: 150,
 	    gutter: 6,
+	    animate: true
         }, options);
 	
 
@@ -125,6 +126,18 @@
 	   of the pictures inside the container.
 	 */
 	var chromatic = function(containerWidth, items){
+
+	    var zero_tab = function(n, k){
+		/* intialise the array with zero */
+		var table = [];
+		for(var i=0; i<n; i++){
+		    table[i] = [];
+		    for(var j=0; j<k; j++){
+			table[i][j] = 0;
+		    }
+		}
+		return table;
+	    };
 	    
 	    var linear_partition = function(seq, k){
 		n = seq.length;
@@ -138,21 +151,8 @@
 		    });
 		}
 
-		/* intialise the arrays with zero */
-		var table = [];
-		for(var i=0; i<n; i++){
-		    table[i] = [];
-		    for(var j=0; j<k; j++){
-			table[i][j] = 0;
-		    }
-		}
-		var solution = [];
-		for(var i=0; i<n-1; i++){
-		    solution[i] = [];
-		    for(var j=0; j<k-1; j++){
-			solution[i][j] = 0;
-		    }
-		}
+		var table = zero_tab(n, k);
+		var solution = zero_tab(n, k);
 
 		/* build the partition tables */
 		for(var i=0; i<n; i++){
@@ -250,7 +250,7 @@
 		for(var j=0; j<rows[i].length; j++){
 		    var vwidth = containerWidth / summed_ratios;
 		    vwidth *= parseFloat($(rows[i][j]).attr("data-aspect-ratio"));
-		    vwidth = parseInt(vwidth) - settings.gutter;
+		    vwidth = parseInt(vwidth) - (settings.gutter);
 		    var vheight = parseInt(((containerWidth-rows[i].length*settings.gutter) / summed_ratios));
 		    $(rows[i][j]).attr("data-vwidth", vwidth);
 		    $(rows[i][j]).attr("data-vheight", vheight);
@@ -263,53 +263,64 @@
 	var showImages = function(imageContainer, realItems) {
 
 	    // reduce width by 1px due to layout problem in IE
-	    // reduce width by 15px because chrome do some weird things
-	    // whend the scrollbar is displayed
-	    var containerWidth = imageContainer.width() - 15;
-	    
+	    var containerWidth = imageContainer.width() - 1;
 	    // Make a copy of the array
 	    var items = $.extend(true, [], realItems);
 	    var rows = null;
+
 	    if(settings.preserveHeight){
 		rows = preserveHeight(containerWidth, items);
 	    }else{
 		rows = chromatic(containerWidth, items);
 	    }
-
 	   
 	    for(var r in rows) {
 	    	for(var i in rows[r]) {		    
 	    	    var item = rows[r][i];
 		    $(item).css({
+			"margin": parseInt(settings.gutter/2) + "px",
+			"float": "left",
+			"position": "relative",
 			"width": $(item).attr("data-vwidth") + "px",
 			"height": $(item).attr("data-vheight") + "px",
-			"margin": parseInt(settings.gutter/2) + "px",
-			"float": "left"			
+
+			//"display": "inline-block"
 		    });
 		     $('img', item).css({
 		     	 "width": $(item).attr("data-vwidth") + "px",
 		     	 "height": $(item).attr("data-vheight") + "px",	
 		     	 "margin-top": "0px",
-		     });
-		    imageContainer.append($(item));
-		    $(item).animate({opacity: 1});
+		     });		    
+		    imageContainer.append($(item));		    
+		    if(settings.animate){
+			$(item).animate({opacity: 1}, 1000);
+		    }else{
+			$(item).css({"opacity": 1});
+		    }
 	    	}
-	    }
+	    }	    
 	};
 
 	var $this = $(this);
 
 	if($(this).length > 0){
 	    $(this).each(function(){
-		$(settings.pictureContainer, $(this)).css("opacity", "0");
+		if(settings.animate){
+		    $(settings.pictureContainer, $(this)).css("opacity", "0");
+		}
 		showImages($(this), $(settings.pictureContainer, $(this)));
 	    });
-	    
-	    $(window).resize(function() {
-		$this.each(function(){		    
-		    showImages($(this), $(settings.pictureContainer, $(this)));
-		});
-             });
+
+	    /* let 100ms before recalculate everything on resizing */
+	    var doit;
+	    window.onresize = function(){
+		clearTimeout(doit);
+		doit = setTimeout(function(){
+		    $this.each(function(){			
+			showImages($(this), $(settings.pictureContainer, $(this)));
+		    });
+		}, 100);
+	    }
 	}
 	return $this;
     };
