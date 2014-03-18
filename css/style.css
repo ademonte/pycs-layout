@@ -1,58 +1,11 @@
-nav{
-    display: block;
-    position: fixed;
-    width: 100%;
-    background-color: #333;
-    opacity: 1;
-    padding: 10px;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    color: #fff;
-    text-align: center;
-}
-nav span{
-    display: inline-block;
-    padding: 3px;
-    margin-left: 2%;
-    position: relative;
-}
-nav span:after{
-    content: '';
-    position: absolute;
-    left: 0px;
-    top: 100%;
-    width: 100%;
-    height: 1px;
-    background-color: #fff;
-    opacity: 0;
 
-    -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-    -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
-    transition: height 0.3s, opacity 0.3s, transform 0.3s;
-
-    -webkit-transform: translateY(-10px);
-    -moz-transform: translateY(-10px);
-    transform: translateY(-10px);
-}
-nav span:hover:after{
-    height: 2px;
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    transform: translateY(0px);
-}
-nav span a{
-    color: #fff;
-    text-decoration: none;
-    font-weight: 900;
-}
 main{
     margin-top: 80px;
 }
+
 .gallery{
-    background-color: #413E4A;
-    padding: 15px;
+    
+    padding: 10px;
 }
 .picture{
     overflow: hidden;
@@ -61,22 +14,18 @@ main{
     margin-top: -2px;
 }
 .legend{
-    background-color: #333;
-    padding: 10px 0;
+    padding: 5px;
     position: absolute;
-    top: -120px;
     width: 100%;
-    opacity: 1;
-    font-size: 0.9em;
-    font-weight: 700;
     text-align: center;
     color: #fff;
-    -webkit-transition: all;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition: all;
-    -moz-transition-duration: 0.3s;
-    transition: all;
-    transition-duration: 0.3s;
+    background-color: #333;
+    top: 0px;
+    opacity: 0;  
+    -webkit-transition: opacity 0.4s;
+}
+.picture:hover .legend{
+    opacity: 0.6;
 }
 img{
     max-width: 100%;
@@ -85,6 +34,33 @@ img{
 .picture:hover{
     cursor: pointer;
 }
-.picture:hover .legend{
-    top:0px;
+.color1{
+    background-color: #73626E;
+}
+.color2{
+    background-color: #B38184;
+}		      	
+.color3{	      	
+    background-color: #F0B49E;
+}		      	
+.color4{	      	
+    background-color: #45ADA8;
+}		      	
+.color5{	      	
+    background-color: #F7E4BE;
+}		      	
+.color6{	      	
+    background-color: #E9D65C;
+}		      	
+.color7{	      	
+    background-color: #E9B654;
+}		      	
+.color8{	      	
+    background-color: #ACBB66;
+}		      	
+.color9{	      	
+    background-color: #C1DAEE;
+}		      	
+.color10{	      	
+    background-color: #92282F;
 }
