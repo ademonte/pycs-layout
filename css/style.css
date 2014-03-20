@@ -1,11 +1,28 @@
+main header{
+    height: 350px;
+    width: 100%;
+    background: #3C7BA2 url(../assets/header.png) center 0 no-repeat fixed;
+    margin-bottom: 20px;
 
-main{
-    margin-top: 80px;
 }
 
-.gallery{
-    
+main header .inside{
+    margin: 0 auto;
+    max-width: 980px;
+    text-align: center;
+    padding-top: 100px;
+}
+main header .inside h1{
+    margin: 0;
+    color: #265069;
+    font-family: 'Expletus Sans', cursive;
+    font-weight: bold;
+    font-size: 5em;
+    text-shadow: 2px 2px 4px #335669;
+}
+.gallery{    
     padding: 10px;
+    background: #eaeaea center 0 no-repeat fixed;
 }
 .picture{
     overflow: hidden;

@@ -5,177 +5,189 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pycs-Layout</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/style.css" />
+    <link href='http://fonts.googleapis.com/css?family=Expletus+Sans:400,700' 
+	  rel='stylesheet' type='text/css'>
     <script src="js/modernizr.min.js"></script>
   </head>
 
   <body>    
-
-    <nav class="top-bar" data-topbar>
-      <ul class="title-area">
-	<li class="name">
-	  <h1><a href="index.html">Pycs-Layout</a></h1>
-	</li>
-	<li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-      </ul>
-
-      <section class="top-bar-section">
-	<!-- Right Nav Section -->
-	<ul class="left">
-	  <li class="divider"></li>
-	  <li class=""><a href="index.html">Documentation</a></li>
-	  <li class="divider"></li>
+    <div class="fixed">
+      <nav class="top-bar" data-topbar>
+	<ul class="title-area">
+	  <li class="name">
+	    <h1><a href="index.html">Pycs-Layout</a></h1>
+	  </li>
+	  <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
 	</ul>
-      </section>
 
-    </nav>
+	<section class="top-bar-section">
+	  <!-- Right Nav Section -->
+	  <ul class="left">
+	    <li class="divider"></li>
+	    <li class=""><a href="index.html">Documentation</a></li>
+	    <li class="divider"></li>
+	  </ul>
+	</section>
+      </nav>
+    </div>
 
     <main role="main">
 
-      <div class="row">
-
-	<h3 class="subheader">
-	  Pycs-Layout is a <a href="http://www.jquery.com">jQuery</a> plugin allowing you to 
-	  distribute pictures by preserving their aspect-ratios and 
-	  filling the maximum amount of space.
-	  It uses the <a href="http://www.chromatic.io/">Chromatic</a> algorithm which is 
-	  detailed on <a href="http://www.crispymtn.com/stories/the-algorithm-for-a-perfectly-balanced-photo-gallery">this blog post</a>.
-	</h3>
-	<div>
-	  <hr /><br />
+      <header class="slide">
+	<div class="inside">
+	  <h1>Pycs-Layout</h1>
 	</div>
+      </header>
 
-	<div class="small-12 medium-6 medium-push-6 columns">
-	  <p>
-	    Look at this mess ! Lots of space wasting. The several div sizes makes it impossible 
-	    for the browser to organize the blocks nicely.
-	  </p>
+
+      <div class="slide">
+	<br />
+	<div class="row">
+
+	  <h3 class="subheader">
+	    Pycs-Layout is a <a href="http://www.jquery.com">jQuery</a> plugin allowing you to 
+	    distribute pictures by preserving their aspect-ratios and 
+	    filling the maximum amount of space.
+	    It uses the <a href="http://www.chromatic.io/">Chromatic</a> algorithm which is 
+	    detailed on <a href="http://www.crispymtn.com/stories/the-algorithm-for-a-perfectly-balanced-photo-gallery">this blog post</a>.
+	  </h3>
+	  <div>
+	    <hr /><br />
+	  </div>
+
+	  <div class="small-12 medium-6 medium-push-6 columns">
+	    <p>
+	      Look at this mess ! Lots of space wasting. The several div sizes makes it impossible 
+	      for the browser to organize the blocks nicely.
+	    </p>
 	    <button class="small radius" data-gallery=".gallery1">Clean me this</button>
-	</div>
+	  </div>
 
-	<div class="small-12 medium-6 medium-pull-6 columns panel radius gallery gallery1 clearfix">
-	  <div class="picture color1" data-width="1000" data-height="740">
-            <div class="legend">
-	      <div class="text-center">1000</div>
-	      <br />
-	      <div class="text-left">740</div>
+	  <div class="small-12 medium-6 medium-pull-6 columns panel radius gallery gallery1 clearfix">
+	    <div class="picture color1" data-width="1000" data-height="740">
+              <div class="legend">
+		<div class="text-center">1000</div>
+		<br />
+		<div class="text-left">740</div>
+	      </div>
 	    </div>
-	  </div>
-	  <div class="picture color2" data-width="400" data-height="600">         
-            <div class="legend">
-	      <div class="text-center">1000</div>
-	      <br />
-	      <div class="text-left">740</div>
+	    <div class="picture color2" data-width="400" data-height="600">         
+              <div class="legend">
+		<div class="text-center">1000</div>
+		<br />
+		<div class="text-left">740</div>
+	      </div>
 	    </div>
-	  </div>
-	  <div class="picture color3" data-width="1300" data-height="962">
-            <div class="legend">
-	      <div class="text-center">1000</div>
-	      <br />
-	      <div class="text-left">740</div>
-	    </div>
+	    <div class="picture color3" data-width="1300" data-height="962">
+              <div class="legend">
+		<div class="text-center">1000</div>
+		<br />
+		<div class="text-left">740</div>
+	      </div>
 
-	  </div>
-	  <div class="picture color4" data-width="400" data-height="265">
-            <div class="legend">
-	      <div class="text-center">1000</div>
-	      <br />
-	      <div class="text-left">740</div>
 	    </div>
-	  </div>
-	  <div class="picture color5" data-width="500" data-height="331">
-            <div class="legend">
-	      <div class="text-center">1000</div>
-	      <br />
-	      <div class="text-left">740</div>
+	    <div class="picture color4" data-width="400" data-height="265">
+              <div class="legend">
+		<div class="text-center">1000</div>
+		<br />
+		<div class="text-left">740</div>
+	      </div>
 	    </div>
+	    <div class="picture color5" data-width="500" data-height="331">
+              <div class="legend">
+		<div class="text-center">1000</div>
+		<br />
+		<div class="text-left">740</div>
+	      </div>
 
+	    </div>
+	    <div class="picture color6" data-width="1000" data-height="1282">
+              <div class="legend">
+		<div class="text-center">1000</div>
+		<br />
+		<div class="text-left">740</div>
+	      </div>
+	    </div>
+	    <div class="picture color7" data-width="1300" data-height="1666">
+              <div class="legend">
+		<div class="text-center">1000</div>
+		<br />
+		<div class="text-left">740</div>
+	      </div>
+	    </div>
+	    <div class="picture color8" data-width="300" data-height="222">
+              <div class="legend">
+		<div class="text-center">1000</div>
+		<br />
+		<div class="text-left">740</div>
+	      </div>
+	    </div>
+	    <div class="picture color9" data-width="400" data-height="512">
+              <div class="legend">
+		<div class="text-center">1000</div>
+		<br />
+		<div class="text-left">740</div>
+	      </div>
+	    </div>
+	    <div class="picture color10" data-width="1300" data-height="862">
+              <div class="legend">
+		<div class="text-center">1000</div>
+		<br />
+		<div class="text-left">740</div>
+	      </div>
+	    </div>
+	    <div class="picture color9" data-width="1300" data-height="862">
+              <div class="legend">
+		<div class="text-center">1000</div>
+		<br />
+		<div class="text-left">740</div>
+	      </div>
+	    </div>
+	    <div class="picture color2" data-width="400" data-height="265">
+              <div class="legend">
+		<div class="text-center">1000</div>
+		<br />
+		<div class="text-left">740</div>
+	      </div>
+	    </div>
+	    <div class="picture color7" data-width="1000" data-height="1282">
+              <div class="legend">
+		<div class="text-center">1000</div>
+		<br />
+		<div class="text-left">740</div>
+	      </div>
+	    </div>
+	    <div class="picture color6" data-width="300" data-height="222">
+              <div class="legend">
+		<div class="text-center">1000</div>
+		<br />
+		<div class="text-left">740</div>
+	      </div>
+	    </div>
+	    <div class="picture color5" data-width="500" data-height="370">
+              <div class="legend">
+		<div class="text-center">1000</div>
+		<br />
+		<div class="text-left">740</div>
+	      </div>
+	    </div>
+	    <div class="picture color4" data-width="400" data-height="265">
+              <div class="legend">
+		<div class="text-center">1000</div>
+		<br />
+		<div class="text-left">740</div>
+	      </div>
+	    </div>	
+	    <div class="picture color3" data-width="1000" data-height="663">
+              <div class="legend">
+		<div class="text-center">1000</div>
+		<br />
+		<div class="text-left">740</div>
+	      </div>
+	    </div>	  
 	  </div>
-	  <div class="picture color6" data-width="1000" data-height="1282">
-            <div class="legend">
-	      <div class="text-center">1000</div>
-	      <br />
-	      <div class="text-left">740</div>
-	    </div>
-	  </div>
-	  <div class="picture color7" data-width="1300" data-height="1666">
-            <div class="legend">
-	      <div class="text-center">1000</div>
-	      <br />
-	      <div class="text-left">740</div>
-	    </div>
-	  </div>
-	  <div class="picture color8" data-width="300" data-height="222">
-            <div class="legend">
-	      <div class="text-center">1000</div>
-	      <br />
-	      <div class="text-left">740</div>
-	    </div>
-	  </div>
-	  <div class="picture color9" data-width="400" data-height="512">
-            <div class="legend">
-	      <div class="text-center">1000</div>
-	      <br />
-	      <div class="text-left">740</div>
-	    </div>
-	  </div>
-	  <div class="picture color10" data-width="1300" data-height="862">
-            <div class="legend">
-	      <div class="text-center">1000</div>
-	      <br />
-	      <div class="text-left">740</div>
-	    </div>
-	  </div>
-	  <div class="picture color9" data-width="1300" data-height="862">
-            <div class="legend">
-	      <div class="text-center">1000</div>
-	      <br />
-	      <div class="text-left">740</div>
-	    </div>
-	  </div>
-	  <div class="picture color2" data-width="400" data-height="265">
-            <div class="legend">
-	      <div class="text-center">1000</div>
-	      <br />
-	      <div class="text-left">740</div>
-	    </div>
-	  </div>
-	  <div class="picture color7" data-width="1000" data-height="1282">
-            <div class="legend">
-	      <div class="text-center">1000</div>
-	      <br />
-	      <div class="text-left">740</div>
-	    </div>
-	  </div>
-	  <div class="picture color6" data-width="300" data-height="222">
-            <div class="legend">
-	      <div class="text-center">1000</div>
-	      <br />
-	      <div class="text-left">740</div>
-	    </div>
-	  </div>
-	  <div class="picture color5" data-width="500" data-height="370">
-            <div class="legend">
-	      <div class="text-center">1000</div>
-	      <br />
-	      <div class="text-left">740</div>
-	    </div>
-	  </div>
-	  <div class="picture color4" data-width="400" data-height="265">
-            <div class="legend">
-	      <div class="text-center">1000</div>
-	      <br />
-	      <div class="text-left">740</div>
-	    </div>
-	  </div>	
-	  <div class="picture color3" data-width="1000" data-height="663">
-            <div class="legend">
-	      <div class="text-center">1000</div>
-	      <br />
-	      <div class="text-left">740</div>
-	    </div>
-	  </div>	  
 	</div>
       </div>
     </main>
@@ -188,7 +200,7 @@
        $("button").click(function(){
 	 $($(this).attr("data-gallery")).pycsLayout({
 	   gutter: 6, 
-	   idealHeight: 80,
+	   idealHeight: 70,
 	   animate: true
 	 });
        })       
