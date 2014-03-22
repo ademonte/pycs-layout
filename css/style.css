@@ -3,14 +3,20 @@ main header{
     width: 100%;
     background: #3C7BA2 url(../assets/header.png) center 0 no-repeat fixed;
     margin-bottom: 20px;
-
 }
-
+div.slide{
+    position: relative;
+    z-index: 2;
+}
+header.slide{
+    z-index: 1;
+}
 main header .inside{
     margin: 0 auto;
     max-width: 980px;
     text-align: center;
     padding-top: 100px;
+    z-index: 1;
 }
 main header .inside h1{
     margin: 0;
@@ -19,6 +25,10 @@ main header .inside h1{
     font-weight: bold;
     font-size: 5em;
     text-shadow: 2px 2px 4px #335669;
+    z-index: 1;
+}
+.js main header .inside h1{
+    position:fixed;
 }
 .gallery{    
     padding: 10px;

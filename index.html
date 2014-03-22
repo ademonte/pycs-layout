@@ -202,8 +202,32 @@
 	   gutter: 6, 
 	   idealHeight: 70,
 	   animate: true
-	 });
-       })       
+	 });	 
+       })
+
+       /* position the title on the center of the page */
+       var center = $(window).width()/2;
+       var elem_width = $("main header .inside h1").width();
+       $("main header .inside h1").css("left", center - elem_width/2);       
+       $(window).resize(function(){
+	 center = $(window).width()/2;
+	 elem_width = $("main header .inside h1").width();
+	 $("main header .inside h1").css("left", center - elem_width/2);       
+       });
+
+       /* make the title disappear on scroll */
+       $(window).scroll(function(){
+	 var scroll = window.pageYOffset || document.documentElement.scrollTop;
+	 //var scroll = $(window).offset().top;
+	 var scrollMax = 150;
+	 if(scroll <= scrollMax){
+	   $("main header .inside h1").css("opacity", 1 - scroll / scrollMax);
+	 }
+	 if(scroll > scrollMax){
+	   $("main header .inside h1").css("opacity", 0);
+	 }
+       });
+
      });     
     </script>
   </body>
