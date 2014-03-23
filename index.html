@@ -28,7 +28,7 @@
 	  <!-- Right Nav Section -->
 	  <ul class="left">
 	    <li class="divider"></li>
-	    <li class=""><a href="index.html">Documentation</a></li>
+	    <li class=""><a href="demo.html">Demo</a></li>
 	    <li class="divider"></li>
 	  </ul>
 	</section>
@@ -218,9 +218,8 @@
 	 $($(this).attr("data-gallery")).pycsLayout({
 	   gutter: 4, 
 	   idealHeight: 70,
-	   animate: true
 	 });	 
-       })
+       });
 
        /* position the title on the center of the page */
        var center = $(window).width()/2;
@@ -235,7 +234,7 @@
        /* make the title disappear on scroll */
        $(window).scroll(function(){
 	 var scroll = window.pageYOffset || document.documentElement.scrollTop;
-	 var scrollMax = 150;
+	 var scrollMax = 170;
 	 if(scroll <= scrollMax){
 	   $("main header .inside h1").css("opacity", 1 - scroll / scrollMax);
 	 }

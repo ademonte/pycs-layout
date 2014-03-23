@@ -38,6 +38,9 @@ main header .inside h1{
     text-shadow: 2px 2px 4px #335669;
     z-index: 1;
 }
+main.photos-gallery{
+    background-color: #ddd;
+}
 .js main header .inside h1{
     position:fixed;
 }

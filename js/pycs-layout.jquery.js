@@ -125,10 +125,13 @@ of the pictures inside the container.
 		totalWidth += (parseInt($(items[i]).attr("data-pycs-vwidth")) + 
 			       settings.gutter);
 	    }
-	    
-	    rows_number = Math.round(totalWidth / containerWidth);
 
-	    partition = linear_partition(weights, rows_number);
+	    rows_number = Math.round(totalWidth / containerWidth);
+	    if(rows_number == 0){
+		partition = [weights];
+	    }else{
+		partition = linear_partition(weights, rows_number);
+	    }
 
 	    /* build the rows and resize the images */
 	    var index = 0;
@@ -172,7 +175,7 @@ of the pictures inside the container.
 	    }
 
 	    rows = chromatic(containerWidth, items);
-	   
+
 	    for(var r in rows) {
 	    	for(var i in rows[r]) {		    
 	    	    var item = rows[r][i];		    
