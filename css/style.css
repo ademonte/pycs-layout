@@ -5,6 +5,10 @@ h1, h2, h3, h4, h5, h6{
 nav .title-area h1{
     font-family: 'Expletus Sans', cursive;
 }
+
+.nav-wrapper{
+    border-bottom: #3C7BA2 4px solid;
+}
 main header{
     height: 350px;
     width: 100%;
