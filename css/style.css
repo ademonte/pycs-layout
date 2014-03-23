@@ -1,3 +1,10 @@
+body,
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Lato', sans-serif;
+}
+nav .title-area h1{
+    font-family: 'Expletus Sans', cursive;
+}
 main header{
     height: 350px;
     width: 100%;
@@ -37,8 +44,8 @@ main header .inside h1{
 .picture{
     overflow: hidden;
     position: relative;
-    float: left;  
     margin-top: -2px;
+    display: inline-block;
 }
 .legend{
     padding: 5px;
@@ -91,4 +98,72 @@ img{
 }		      	
 .color10{	      	
     background-color: #92282F;
+}
+.picture1{
+    width: 20px;
+    height: 30px;
+}
+.picture2{
+    width: 40px;
+    height: 51px;
+}
+.picture3{
+    width: 30px;
+    height: 38px;
+}
+.picture4{
+    width: 60px;
+    height: 90px;
+}
+.picture5{
+    width: 60px;
+    height: 44px;
+}
+.picture6{
+    width: 50px;
+    height: 64px;
+}
+.picture7{
+    width: 60px;
+    height: 76px;
+}
+.picture8{
+    width: 60px;
+    height: 44px;
+}
+.picture9{
+    width: 20px;
+    height: 25px;
+}
+.picture10{
+    width: 50px;
+    height: 37px;
+}
+.picture11{
+    width: 60px;
+    height: 44px;
+}
+.picture12{
+    width: 40px;
+    height: 51px;
+}
+.picture13{
+    width: 50px;
+    height: 33px;
+}
+.picture14{
+    width: 20px;
+    height: 30px;
+}
+.picture15{
+    width: 40px;
+    height: 26px;
+}
+.picture16{
+    width: 60px;
+    height: 90px;
+}
+.picture17{
+    width: 50px;
+    height: 75px;
 }
