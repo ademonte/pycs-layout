@@ -34,7 +34,7 @@
 
 	  <ul class="right">
 	    <li class="active has-form">
-	      <a class="button" href="js/pycs-layout.jquery.js">Download</a>
+	      <a class="button" href="js/pycs-layout.jquery.min.js">Download</a>
 	    </li>
 	  </ul>
 	</section>
@@ -210,22 +210,23 @@
               </div>
 	    </div>
 	  </div>
-
-	    <h3 class="subheader">
-	      What you just did by clicking on this button is
-	      telling <em>Pycs-Layout</em> to build rows of equal width and with
-	      a height of approximatively 70px.
-	    </h3>
-
 	  <div>
-	    <hr /><br />
+	    <br />
+	  </div>
+	  <h3 class="subheader">
+	    What you just did by clicking on this button is
+	    telling <em>Pycs-Layout</em> to build rows of equal width and with
+	    a height of approximatively 70px.
+	  </h3>
+	  <div>
+	    <br />
 	  </div>
 	</div>
 
 	<div class="row">
 	  <h2> How to use it ?</h2>	  
 
-	  <div class="small-12 columns">
+	  <div class="small-12 columns panel radius">
 	    <pre>
 	      <code class="language-markup">
 &lt;body&gt;
@@ -253,7 +254,7 @@
         $(document).ready( function() {
 
             $("gallery").pycsLayout({
-              /* the class of the elements to layout */
+              /* The class of the elements to layout */
               pictureContainer: ".picture",
               /* How many pixels between each pictureContainer */
               gutter: 4, 
@@ -268,9 +269,17 @@
 	    </pre>
 	  </div>
 	  <div>
-	    <hr /><br />
+	    <br />
 	  </div>
-
+	  <div class="small-1 small-centered columns">
+	    <a class="button" href="js/pycs-layout.jquery.min.js">Download</a>
+	  </div>
+	  <div>
+	    <br />
+	  </div>
+	  <div>
+	    <br />
+	  </div>
 	</div>
 
       </div>
@@ -278,7 +287,7 @@
     <script src="js/prism.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/foundation.min.js"></script>
-    <script src="js/pycs-layout.jquery.js"></script>
+    <script src="js/pycs-layout.jquery.min.js"></script>
     <script>
      $(document).foundation();
      $(document).ready( function() {

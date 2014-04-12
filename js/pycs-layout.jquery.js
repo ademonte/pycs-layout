@@ -1,11 +1,12 @@
-/*
+/*!
  * Pycs-Layout jquery plugin
+ * @author: Antoine de Monte
  *
  * Free to use under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  *  
- * This algorithm reorganises the photo to optimize the distribution
- * of the pictures inside the container.
+ * This algorithm optimizes the distribution
+ * of pictures inside their container.
  *
  * Thanks Johannes Treitz for this one.
  * http://www.crispymtn.com/stories/the-algorithm-for-a-perfectly-balanced-photo-gallery
