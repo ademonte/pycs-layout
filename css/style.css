@@ -13,9 +13,9 @@ main header{
     height: 350px;
     width: 100%;
     background: #3C7BA2 url(../assets/header.png) center 0 no-repeat fixed;
-    margin-bottom: 20px;
 }
 div.slide{
+    border-top: 2px solid #666;
     position: relative;
     z-index: 2;
 }
@@ -107,70 +107,70 @@ img{
     background-color: #92282F;
 }
 .picture1{
-    width: 20px;
-    height: 30px;
+    width: 94px;
+    height: 70px;
 }
 .picture2{
-    width: 51px;
-    height: 40px;
+    width: 94px;
+    height: 70px;
 }
 .picture3{
-    width: 30px;
-    height: 38px;
+    width: 56px;
+    height: 85px;
 }
 .picture4{
-    width: 90px;
-    height: 60px;
+    width: 120px;
+    height: 80px;
 }
 .picture5{
-    width: 60px;
-    height: 44px;
+    width: 53px;
+    height: 80px;
 }
 .picture6{
-    width: 50px;
-    height: 64px;
+    width: 56px;
+    height: 85px;
 }
 .picture7{
-    width: 76px;
-    height: 60px;
+    width: 66px;
+    height: 85px;
 }
 .picture8{
-    width: 60px;
-    height: 44px;
+    width: 101px;
+    height: 75px;
 }
 .picture9{
-    width: 45px;
-    height: 35px;
+    width: 62px;
+    height: 80px;
 }
 .picture10{
-    width: 50px;
-    height: 37px;
+    width: 66px;
+    height: 85px;
 }
 .picture11{
-    width: 60px;
-    height: 44px;
+    width: 62px;
+    height: 80px;
 }
 .picture12{
-    width: 40px;
-    height: 51px;
+    width: 128px;
+    height: 85px;
 }
 .picture13{
-    width: 50px;
-    height: 33px;
+    width: 62px;
+    height: 80px;
 }
 .picture14{
-    width: 20px;
-    height: 30px;
+    width: 113px;
+    height: 75px;
 }
 .picture15{
-    width: 40px;
-    height: 26px;
+    width: 56px;
+    height: 85px;
 }
 .picture16{
-    width: 60px;
-    height: 90px;
+    width: 54px;
+    height: 70px;
 }
 .picture17{
-    width: 50px;
-    height: 75px;
+    width: 94px;
+    height: 70px;
 }

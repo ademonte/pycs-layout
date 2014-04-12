@@ -6,6 +6,7 @@
     <title>Pycs-Layout</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/prism.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link href='http://fonts.googleapis.com/css?family=Expletus+Sans:400,700' 
 	  rel='stylesheet' type='text/css'>
@@ -25,11 +26,16 @@
 	</ul>
 
 	<section class="top-bar-section">
-	  <!-- Right Nav Section -->
 	  <ul class="left">
 	    <li class="divider"></li>
 	    <li class=""><a href="demo.html">Demo</a></li>
 	    <li class="divider"></li>
+	  </ul>
+
+	  <ul class="right">
+	    <li class="active has-form">
+	      <a class="button" href="js/pycs-layout.jquery.js">Download</a>
+	    </li>
 	  </ul>
 	</section>
       </nav>
@@ -47,7 +53,7 @@
       <div class="slide">
 	<br />
 	<div class="row">
-
+	  <h2> What is Pycs-Layout</h2>
 	  <h3 class="subheader">
 	    Pycs-Layout is a <a href="http://www.jquery.com">jQuery</a> plugin 
 	    allowing you to distribute pictures by preserving their 
@@ -62,8 +68,9 @@
 
 	  <div class="small-12 medium-6 medium-push-6 columns">
 	    <p>
-	      Look at this mess ! Lots of space wasting. The several div sizes 
-	      makes it impossible for the browser to organize the blocks nicely.
+	      Look at this mess ! Lots of space wasting. The color blocks are
+	      displayed at their original sizes with a <em>float</em> property.
+	      We can do better to make this nicer.
 	    </p>
 	    <div class="row">
 	      <div class="small-8 medium-7 large-8 columns">
@@ -82,111 +89,193 @@
 
 	  <div class="small-12 medium-6 medium-pull-6 columns panel radius
 		      gallery gallery1 clearfix">
-	  
-	    <div class="picture picture3 color2">
+
+	    <div class="picture picture1 color1">
               <div class="legend">
-		<div class="text-center">30</div>
+		<div class="text-center">94</div>
 		<br />
-		<div class="text-left">38</div>
+		<div class="text-left">70</div>
               </div>
 	    </div>
-	    <div class="picture picture5 color3">
+	    <div class="picture picture2 color5">
               <div class="legend">
-		<div class="text-center">60</div>
+		<div class="text-center">94</div>
 		<br />
-		<div class="text-left">44</div>
+		<div class="text-left">70</div>
               </div>
 	    </div>
-	    <div class="picture picture2 color4">
+	    <div class="picture picture3 color3">
               <div class="legend">
-		<div class="text-center">51</div>
+		<div class="text-center">56</div>
 		<br />
-		<div class="text-left">40</div>
+		<div class="text-left">85</div>
               </div>
 	    </div>
-	    <div class="picture picture6 color5">
+	    <div class="picture picture4 color6">
               <div class="legend">
-		<div class="text-center">50</div>
+		<div class="text-center">120</div>
 		<br />
-		<div class="text-left">64</div>
+		<div class="text-left">80</div>
               </div>
 	    </div>
-	    <div class="picture picture7 color6">
+	    <div class="picture picture5 color8">
               <div class="legend">
-		<div class="text-center">76</div>
+		<div class="text-center">53</div>
 		<br />
-		<div class="text-left">60</div>
+		<div class="text-left">80</div>
               </div>
 	    </div>
-	    <div class="picture picture8 color7">
+	    <div class="picture picture6 color8">
               <div class="legend">
-		<div class="text-center">60</div>
+		<div class="text-center">56</div>
 		<br />
-		<div class="text-left">44</div>
+		<div class="text-left">85</div>
               </div>
 	    </div>
-	    <div class="picture picture9 color8">
+	    <div class="picture picture7 color10">
               <div class="legend">
-		<div class="text-center">45</div>
+		<div class="text-center">66</div>
 		<br />
-		<div class="text-left">35</div>
+		<div class="text-left">85</div>
               </div>
 	    </div>
-	    <div class="picture picture4 color9">
+	    <div class="picture picture8 color2">
               <div class="legend">
-		<div class="text-center">90</div>
-		<br />
-		<div class="text-left">60</div>
-              </div>
-	    </div>
-	    <div class="picture picture10 color10">
-              <div class="legend">
-		<div class="text-center">50</div>
-		<br />
-		<div class="text-left">37</div>
-              </div>
-	    </div>
-	    <div class="picture picture11 color6">
-              <div class="legend">
-		<div class="text-center">60</div>
-		<br />
-		<div class="text-left">44</div>
-              </div>
-	    </div>
-	    <div class="picture picture12 color7">
-              <div class="legend">
-		<div class="text-center">40</div>
-		<br />
-		<div class="text-left">51</div>
-              </div>
-	    </div>
-	    <div class="picture picture13 color5">
-              <div class="legend">
-		<div class="text-center">50</div>
-		<br />
-		<div class="text-left">33</div>
-              </div>
-	    </div>
-	    <div class="picture picture15 color3">
-              <div class="legend">
-		<div class="text-center">40</div>
-		<br />
-		<div class="text-left">26</div>
-              </div>
-	    </div>
-	    <div class="picture picture17 color1">
-              <div class="legend">
-		<div class="text-center">50</div>
+		<div class="text-center">101</div>
 		<br />
 		<div class="text-left">75</div>
               </div>
 	    </div>
+	    <div class="picture picture9 color10">
+              <div class="legend">
+		<div class="text-center">62</div>
+		<br />
+		<div class="text-left">80</div>
+              </div>
+	    </div>
+	    <div class="picture picture10 color7">
+              <div class="legend">
+		<div class="text-center">66</div>
+		<br />
+		<div class="text-left">85</div>
+              </div>
+	    </div>
+	    <div class="picture picture11 color4">
+              <div class="legend">
+		<div class="text-center">62</div>
+		<br />
+		<div class="text-left">80</div>
+              </div>
+	    </div>
+	    <div class="picture picture12 color7">
+              <div class="legend">
+		<div class="text-center">128</div>
+		<br />
+		<div class="text-left">85</div>
+              </div>
+	    </div>
+	    <div class="picture picture13 color3">
+              <div class="legend">
+		<div class="text-center">62</div>
+		<br />
+		<div class="text-left">80</div>
+              </div>
+	    </div>
+	    <div class="picture picture14 color6">
+              <div class="legend">
+		<div class="text-center">113</div>
+		<br />
+		<div class="text-left">75</div>
+              </div>
+	    </div>
+	    <div class="picture picture15 color8">
+              <div class="legend">
+		<div class="text-center">56</div>
+		<br />
+		<div class="text-left">85</div>
+              </div>
+	    </div>
+	    <div class="picture picture16 color2">
+              <div class="legend">
+		<div class="text-center">54</div>
+		<br />
+		<div class="text-left">70</div>
+              </div>
+	    </div>
+	    <div class="picture picture17 color1">
+              <div class="legend">
+		<div class="text-center">94</div>
+		<br />
+		<div class="text-left">70</div>
+              </div>
+	    </div>
+	  </div>
 
+	    <h3 class="subheader">
+	      What you just did by clicking on this button is
+	      telling <em>Pycs-Layout</em> to build rows of equal width and with
+	      a height of approximatively 70px.
+	    </h3>
 
+	  <div>
+	    <hr /><br />
 	  </div>
 	</div>
+
+	<div class="row">
+	  <h2> How to use it ?</h2>	  
+
+	  <div class="small-12 columns">
+	    <pre>
+	      <code class="language-markup">
+&lt;body&gt;
+    ...
+
+    &lt;div class="gallery"&gt;
+        &lt;div class="picture"&gt;
+            &lt;img src="mypicture.jpg" /&gt;
+        &lt;/div&gt;
+        &lt;div class="picture"&gt;
+            &lt;img src="mypicture1.jpg" /&gt;
+        &lt;/div&gt;
+        &lt;div class="picture"&gt;
+            &lt;img src="mypicture2.jpg" /&gt;
+        &lt;/div&gt;
+        ...
+    &lt;/div&gt;
+
+    ...
+
+    &lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/pycs-layout.jquery.js"&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        $(document).ready( function() {
+
+            $("gallery").pycsLayout({
+              /* the class of the elements to layout */
+              pictureContainer: ".picture",
+              /* How many pixels between each pictureContainer */
+              gutter: 4, 
+              /* Height of the rows */
+              idealHeight: 70,
+            });
+
+        });	
+    &lt;/script&gt;
+&lt;/body&gt;
+	      </code>   
+	    </pre>
+	  </div>
+	  <div>
+	    <hr /><br />
+	  </div>
+
+	</div>
+
       </div>
     </main>
+    <script src="js/prism.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src="js/pycs-layout.jquery.js"></script>
