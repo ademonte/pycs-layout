@@ -1,1 +1,1 @@
-[Pycs-Layout page | http://ademonte.github.io/pycs-layout]
+[Pycs-Layout page](http://ademonte.github.io/pycs-layout)
