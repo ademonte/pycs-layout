@@ -251,7 +251,8 @@
     &lt;script src="js/pycs-layout.jquery.js"&gt;&lt;/script&gt;
 
     &lt;script&gt;
-        $(document).ready( function() {
+        /* wait for the window to be loaded */
+        $(window).load( function() {
 
             $("gallery").pycsLayout({
               /* The class of the elements to layout */
@@ -286,19 +287,13 @@
       </div>
     </main>
     <script src="js/prism.js"></script>
-    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src="js/pycs-layout.jquery.min.js"></script>
     <script>
      $(document).foundation();
      $(document).ready( function() {
-       $("button").click(function(){
-	 $($(this).attr("data-gallery")).pycsLayout({
-	   gutter: 4, 
-	   idealHeight: 70,
-	 });	 
-       });
-
+     
        /* position the title on the center of the page */
        var center = $(window).width()/2;
        var elem_width = $("main header .inside h1").width();
@@ -321,7 +316,16 @@
 	 }
        });
 
-     });     
+     });
+     $(window).load(function(){
+         $("button").click(function(){
+             $($(this).attr("data-gallery")).pycsLayout({
+	         gutter: 4, 
+	         idealHeight: 70,
+	     });	 
+         });
+     });
+     
     </script>
   </body>
 </html>

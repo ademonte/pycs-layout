@@ -72,12 +72,12 @@
       </div>
 
     </main>
-    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src="js/pycs-layout.jquery.js"></script>
     <script>
      $(document).foundation();
-     $(document).ready( function() {
+     $(window).load( function() {
        $(".photos-gallery").pycsLayout({
 	 gutter: 4, 
 	 idealHeight: parseInt($(window).height()/2),
