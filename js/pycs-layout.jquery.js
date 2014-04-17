@@ -175,8 +175,12 @@
 		for(var i=0; i<items.length; i++){
 		    var width = parseInt($(items[i]).width());
 		    var height = parseInt($(items[i]).height());
-		    $(items[i]).attr("data-pycs-width", width);
-		    $(items[i]).attr("data-pycs-height", height);
+		    if( ! $(items[i]).attr("data-pycs-width")){
+			$(items[i]).attr("data-pycs-width", width);
+		    }
+		    if( ! $(items[i]).attr("data-pycs-height")){
+			$(items[i]).attr("data-pycs-height", height);
+		    }
 		}
 	    }
 
