@@ -17,15 +17,19 @@
     $.fn.pycsLayout = function(options) {
 
 	var settings = $.extend({
+	    /* the jquery selector pointing to the container that contains
+	       the elements to layout. */
 	    pictureContainer: ".picture",
+	    /* the height we want our elements to have. */
 	    idealHeight: 150,
+	    /* the horizontal and vertical margin between the elements (in px). */
 	    gutter: 6,
         }, options);
 		
 	var chromatic = function(containerWidth, items){
 
-	    var zero_tab = function(n, k){
-		/* intialise the array with zero */
+	    /* create a 2-dimensionnal array initialized with 0 and return it.*/
+	    var zero_tab = function(n, k){		
 		var table = [];
 		for(var i=0; i<n; i++){
 		    table[i] = [];
@@ -127,12 +131,14 @@
 	    var rows_number = 0;
 	    var rows = [];
 
+	    /* get the number of rows we want depending on the parent container width. */
 	    for(var i=0; i<items.length; i++){
 		totalWidth += (parseInt($(items[i]).attr("data-pycs-vwidth")) + 
 			       settings.gutter);
 	    }
-
 	    rows_number = Math.round(totalWidth / containerWidth);
+
+	    /* all the elements on the same row. */
 	    if(rows_number == 0){
 		partition = [weights];
 	    }else{
@@ -164,13 +170,13 @@
 
 	var showImages = function(imageContainer, realItems) {
 
-	    // reduce width by 1px due to layout problem in IE
+	    /* reduce width by 1px due to layout problem in IE */
 	    var containerWidth = imageContainer.width() - 1;
-	    // Make a copy of the array
+	    /* Make a copy of the array */
 	    var items = $.extend(true, [], realItems);
 	    var rows = null;
 	    
-	    // we keep the original sizes so we can deal with the reisze event
+	    /* we keep the original sizes so we can deal with the reisze event */
 	    if(imageContainer.attr("data-pycs-done") != "true"){
 		for(var i=0; i<items.length; i++){
 		    var width = parseInt($(items[i]).width());
@@ -196,13 +202,7 @@
 			"width": $(item).attr("data-pycs-vwidth") + "px",
 			"height": $(item).attr("data-pycs-vheight") + "px",
 			"opacity": 1
-			//"display": "inline-block"
 		    });
-		     $('img', item).css({
-		     	 "width": $(item).attr("data-pycs-vwidth") + "px",
-		     	 "height": $(item).attr("data-pycs-vheight") + "px",	
-		     	 "margin-top": "0px",
-		     });		    
 		    imageContainer.append($(item));
 		}		
 	    }

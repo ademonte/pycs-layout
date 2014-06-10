@@ -56,6 +56,11 @@ main.photos-gallery{
     margin-top: -2px;
     display: inline-block;
 }
+.picture img{
+    margin: 0px;
+    height: 100%;
+}
+
 .legend{
     padding: 5px;
     position: absolute;
