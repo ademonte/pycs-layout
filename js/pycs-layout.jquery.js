@@ -17,8 +17,7 @@
     $.fn.pycsLayout = function(options) {
 
 	var settings = $.extend({
-	    /* the jquery selector pointing to the container that contains
-	       the elements to layout. */
+	    /* the class of the elements we want to layout. */
 	    pictureContainer: ".picture",
 	    /* the height we want our elements to have. */
 	    idealHeight: 150,
@@ -126,7 +125,7 @@
 		return aspect_ratios;
 	    }
 
-	    var totalWidth = 0;
+	    var totalWidth = -20;
 	    var weights = get_aspect_ratios(items);
 	    var rows_number = 0;
 	    var rows = [];
