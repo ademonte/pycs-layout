@@ -119,13 +119,13 @@
 		    var new_width = ar * settings.idealHeight;
 		    $(items[i]).attr("data-pycs-vwidth", new_width);
 		    $(items[i]).attr("data-pycs-vheight", settings.idealHeight);
-		    $(items[i]).attr("data-pycs-aspect-ratio", ar);
+		    $(items[i]).attr("data-pycs-aspect-ratio", Math.round(ar*100)/100);
 		    aspect_ratios.push(parseInt(ar*100));
 		}
 		return aspect_ratios;
 	    }
 
-	    var totalWidth = -20;
+	    var totalWidth = 0;
 	    var weights = get_aspect_ratios(items);
 	    var rows_number = 0;
 	    var rows = [];
