@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="css/foundation.min.css">
     <link rel="stylesheet" href="css/prism.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
-    <link href='http://fonts.googleapis.com/css?family=Expletus+Sans:400,700' 
+    <link href='http://fonts.googleapis.com/css?family=Expletus+Sans:400,700'
 	  rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' 
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic'
 	  rel='stylesheet' type='text/css'>
     <script src="js/modernizr.min.js"></script>
   </head>
 
-  <body>    
+  <body>
     <div class="fixed nav-wrapper">
       <nav class="top-bar" data-topbar>
 	<ul class="title-area">
@@ -27,9 +27,6 @@
 
 	<section class="top-bar-section">
 	  <ul class="left">
-	    <li class="divider"></li>
-	    <li class=""><a href="demo.html">Demo</a></li>
-	    <li class="divider"></li>
 	  </ul>
 
 	  <ul class="right">
@@ -55,11 +52,11 @@
 	<div class="row">
 	  <h2> What is Pycs-Layout</h2>
 	  <h3 class="subheader">
-	    Pycs-Layout is a <a href="http://www.jquery.com">jQuery</a> plugin 
-	    allowing you to distribute pictures by preserving their 
+	    Pycs-Layout is a <a href="http://www.jquery.com">jQuery</a> plugin
+	    allowing you to distribute pictures by preserving their
 	    aspect-ratios and filling the maximum amount of space.
-	    It uses the <a href="http://www.chromatic.io/">Chromatic</a> 
-	    algorithm which is detailed on 
+	    It uses the <a href="http://www.chromatic.io/">Chromatic</a>
+	    algorithm which is detailed on
 	    <a href="http://www.crispymtn.com/stories/the-algorithm-for-a-perfectly-balanced-photo-gallery">this blog post</a>.
 	  </h3>
 	  <div>
@@ -224,7 +221,7 @@
 	</div>
 
 	<div class="row">
-	  <h2> How to use it ?</h2>	  
+	  <h2> How to use it ?</h2>
 
 	  <div class="small-12 columns panel radius">
 	    <pre>
@@ -258,15 +255,15 @@
               /* The class of the elements to layout */
               pictureContainer: ".picture",
               /* How many pixels between each pictureContainer */
-              gutter: 4, 
+              gutter: 4,
               /* Height of the rows */
               idealHeight: 70,
             });
 
-        });	
+        });
     &lt;/script&gt;
 &lt;/body&gt;
-	      </code>   
+	      </code>
 	    </pre>
 	  </div>
 	  <div>
@@ -293,15 +290,15 @@
     <script>
      $(document).foundation();
      $(document).ready( function() {
-     
+
        /* position the title on the center of the page */
        var center = $(window).width()/2;
        var elem_width = $("main header .inside h1").width();
-       $("main header .inside h1").css("left", center - elem_width/2);       
+       $("main header .inside h1").css("left", center - elem_width/2);
        $(window).resize(function(){
 	 center = $(window).width()/2;
 	 elem_width = $("main header .inside h1").width();
-	 $("main header .inside h1").css("left", center - elem_width/2);       
+	 $("main header .inside h1").css("left", center - elem_width/2);
        });
 
        /* make the title disappear on scroll */
@@ -320,14 +317,12 @@
      $(window).load(function(){
          $("button").click(function(){
              $($(this).attr("data-gallery")).pycsLayout({
-	         gutter: 4, 
+	         gutter: 4,
 	         idealHeight: 70,
-	     });	 
+	     });
          });
      });
-     
+
     </script>
   </body>
 </html>
-
-
