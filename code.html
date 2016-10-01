@@ -15,10 +15,13 @@
   <script src="js/pycs-layout.jquery.js"></script>
 
   <script>
-   /* wait for the window to be loaded */
-   $(window).load( function() {
+   $(document).ready(function() {
 
-       $("gallery").pycsLayout({
+       /* Be careful, you have to wait for the images to be loaded,
+          otherwise pycsLayout won't have the images dimensions.
+          Look at the demo to see how it can be done.
+        */
+       $(".gallery").pycsLayout({
            /* The class of the elements to layout */
            pictureContainer: ".picture",
            /* How many pixels between each pictureContainer */

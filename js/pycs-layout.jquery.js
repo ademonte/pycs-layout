@@ -4,7 +4,7 @@
  *
  * Free to use under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- *  
+ *
  * This algorithm optimizes the distribution
  * of pictures inside their container.
  *
@@ -24,11 +24,11 @@
 	    /* the horizontal and vertical margin between the elements (in px). */
 	    gutter: 6,
         }, options);
-		
+
 	var chromatic = function(containerWidth, items){
 
 	    /* create a 2-dimensionnal array initialized with 0 and return it.*/
-	    var zero_tab = function(n, k){		
+	    var zero_tab = function(n, k){
 		var table = [];
 		for(var i=0; i<n; i++){
 		    table[i] = [];
@@ -38,7 +38,7 @@
 		}
 		return table;
 	    };
-	    
+
 	    var linear_partition = function(seq, k){
 		n = seq.length;
 
@@ -67,11 +67,11 @@
 
 		for(var i=1; i<n; i++){
 		    for(var j=1; j<k; j++){
-			var m = [Math.max(table[0][j-1], 
+			var m = [Math.max(table[0][j-1],
 					  table[i][0] - table[0][0])];
 			m.push(0);
 			for(var x=0; x<i; x++){
-			    var max=Math.max(table[x][j-1], 
+			    var max=Math.max(table[x][j-1],
 					     table[i][0] - table[x][0]);
 			    if(max < m[0]){
 				m = [max, x];
@@ -91,7 +91,7 @@
 			for(var i=solution[n-1][k]+1; i<n+1; i++){
 			    p.push(seq[i]);
 			}
-		    
+
 			ans = [p].concat(ans);
 			n = solution[n-1][k];
 		    }
@@ -103,9 +103,9 @@
 		}
 		return [p].concat(ans);
 	    }
-	    
-	    /* 
-	       Compute aspect ratios for each picture and store it as an 
+
+	    /*
+	       Compute aspect ratios for each picture and store it as an
 	       attribute.
 	       It also compute the width of the picture after reducing its height to
 	       idealHeight.
@@ -132,7 +132,7 @@
 
 	    /* get the number of rows we want depending on the parent container width. */
 	    for(var i=0; i<items.length; i++){
-		totalWidth += (parseInt($(items[i]).attr("data-pycs-vwidth")) + 
+		totalWidth += (parseInt($(items[i]).attr("data-pycs-vwidth")) +
 			       settings.gutter);
 	    }
 	    rows_number = Math.round(totalWidth / containerWidth);
@@ -147,7 +147,7 @@
 	    /* build the rows and resize the images */
 	    var index = 0;
 	    for(var i=0; i<partition.length; i++){
-		rows[i] = [];		    
+		rows[i] = [];
 		var summed_ratios = 0;
 		for(var j=0; j<partition[i].length; j++){
 		    summed_ratios += parseFloat($(items[index]).attr("data-pycs-aspect-ratio"));
@@ -163,7 +163,7 @@
 		    $(rows[i][j]).attr("data-pycs-vheight", vheight);
 		}
 	    }
-	    
+
 	    return rows;
 	}
 
@@ -171,10 +171,9 @@
 
 	    /* reduce width by 1px due to layout problem in IE */
 	    var containerWidth = imageContainer.width() - 1;
-	    /* Make a copy of the array */
-	    var items = $.extend(true, [], realItems);
+            var items = realItems;
 	    var rows = null;
-	    
+
 	    /* we keep the original sizes so we can deal with the reisze event */
 	    if(imageContainer.attr("data-pycs-done") != "true"){
 		for(var i=0; i<items.length; i++){
@@ -182,9 +181,7 @@
 		    var height = parseInt($(items[i]).height());
 		    if( ! $(items[i]).attr("data-pycs-width")){
 			$(items[i]).attr("data-pycs-width", width);
-		    }
-		    if( ! $(items[i]).attr("data-pycs-height")){
-			$(items[i]).attr("data-pycs-height", height);
+                        $(items[i]).attr("data-pycs-height", height);
 		    }
 		}
 	    }
@@ -192,8 +189,8 @@
 	    rows = chromatic(containerWidth, items);
 
 	    for(var r in rows) {
-	    	for(var i in rows[r]) {		    
-	    	    var item = rows[r][i];		    
+	    	for(var i in rows[r]) {
+	    	    var item = rows[r][i];
 		    $(item).css({
 			"margin": parseInt(settings.gutter/2) + "px",
 			"float": "left",
@@ -202,8 +199,7 @@
 			"height": $(item).attr("data-pycs-vheight") + "px",
 			"opacity": 1
 		    });
-		    imageContainer.append($(item));
-		}		
+		}
 	    }
 	    imageContainer.attr("data-pycs-done", "true");
 	};
@@ -222,7 +218,7 @@
 		doit = setTimeout(function(){
 		    $this.each(function(){
 			showImages(
-			    $(this), 
+			    $(this),
 			    $(settings.pictureContainer, $(this))
 			);
 		    });

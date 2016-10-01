@@ -24,8 +24,12 @@
 
 	<div class="top-bar-right">
 	  <ul class="menu">
+            <li class="active">
+	      <a href="demo.html">Demo</a>
+	    </li>
+
 	    <li>
-	      <a class="button small" href="js/pycs-layout.jquery.js">Download</a>
+	      <a href="js/pycs-layout.jquery.js">Download</a>
 	    </li>
 	  </ul>
 	</div>
@@ -233,9 +237,9 @@
     <script src="js/foundation.min.js"></script>
     <script src="js/pycs-layout.jquery.js"></script>
     <script>
-     $(document).foundation();
-     $(document).ready( function() {
 
+     $(document).ready( function() {
+      $(document).foundation();
        /* position the title on the center of the page */
        var center = $(window).width()/2;
        var elem_width = $("main header .inside h1").width();
