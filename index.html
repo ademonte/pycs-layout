@@ -6,8 +6,8 @@
     <title>Pycs-Layout</title>
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/foundation.min.css">
-    <link rel="stylesheet" href="css/prism.min.css" />
-    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/prism.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link href='//fonts.googleapis.com/css?family=Expletus+Sans:400,700'
 	  rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic'
@@ -16,25 +16,19 @@
   </head>
 
   <body>
-    <div class="fixed nav-wrapper">
-      <nav class="top-bar" data-topbar>
-	<ul class="title-area">
-	  <li class="name">
-	    <h1><a href="index.html">Pycs-Layout</a></h1>
-	  </li>
-	  <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-	</ul>
+    <div class="nav-wrapper clearfix" data-sticky-container>
+      <nav class="top-bar" data-sticky data-options="marginTop:0;" style="width:100%">
+        <div class="top-bar-title">
+	  <a href="index.html">Pycs-Layout</a>
+        </div>
 
-	<section class="top-bar-section">
-	  <ul class="left">
-	  </ul>
-
-	  <ul class="right">
-	    <li class="active has-form">
-	      <a class="button radius" href="js/pycs-layout.jquery.min.js">Download</a>
+	<div class="top-bar-right">
+	  <ul class="menu">
+	    <li>
+	      <a class="button small" href="js/pycs-layout.jquery.js">Download</a>
 	    </li>
 	  </ul>
-	</section>
+	</div>
       </nav>
     </div>
 
@@ -48,7 +42,7 @@
 
 
       <div class="slide">
-	<br />
+
 	<div class="row">
 	  <h2> What is Pycs-Layout</h2>
 	  <h3 class="subheader">
@@ -60,10 +54,10 @@
 	    <a href="http://www.crispymtn.com/stories/the-algorithm-for-a-perfectly-balanced-photo-gallery">this blog post</a>.
 	  </h3>
 	  <div>
-	    <hr /><br />
+	    <hr />
 	  </div>
 
-	  <div class="small-12 medium-6 medium-push-6 columns">
+	  <div class="small-12 medium-6 medium-push-6 columns end">
 	    <p>
 	      Look at this mess ! Lots of space wasting. The color blocks are
 	      displayed at their original sizes with a <em>float</em> property.
@@ -77,215 +71,167 @@
 		</p>
 	      </div>
 	      <div class="small-4 medium-5 large-4 columns">
-		<button class="small radius" data-gallery=".gallery1">
+		<button class="button" data-gallery=".gallery1">
 		  Clean me this
 		</button>
 	      </div>
 	    </div>
 	  </div>
 
-	  <div class="small-12 medium-6 medium-pull-6 columns panel radius
+	  <div class="small-12 medium-5 medium-pull-6 medium-offset-1 columns panel radius
 		      gallery gallery1 clearfix">
 
 	    <div class="picture picture1 color1">
               <div class="legend">
 		<div class="text-center">94</div>
-		<br />
+
 		<div class="text-left">70</div>
               </div>
 	    </div>
 	    <div class="picture picture2 color5">
               <div class="legend">
 		<div class="text-center">94</div>
-		<br />
+
 		<div class="text-left">70</div>
               </div>
 	    </div>
 	    <div class="picture picture3 color3">
               <div class="legend">
 		<div class="text-center">56</div>
-		<br />
+
 		<div class="text-left">85</div>
               </div>
 	    </div>
 	    <div class="picture picture4 color6">
               <div class="legend">
 		<div class="text-center">120</div>
-		<br />
+
 		<div class="text-left">80</div>
               </div>
 	    </div>
 	    <div class="picture picture5 color8">
               <div class="legend">
 		<div class="text-center">53</div>
-		<br />
+
 		<div class="text-left">80</div>
               </div>
 	    </div>
 	    <div class="picture picture6 color8">
               <div class="legend">
 		<div class="text-center">56</div>
-		<br />
+
 		<div class="text-left">85</div>
               </div>
 	    </div>
 	    <div class="picture picture7 color10">
               <div class="legend">
 		<div class="text-center">66</div>
-		<br />
+
 		<div class="text-left">85</div>
               </div>
 	    </div>
 	    <div class="picture picture8 color2">
               <div class="legend">
 		<div class="text-center">101</div>
-		<br />
+
 		<div class="text-left">75</div>
               </div>
 	    </div>
 	    <div class="picture picture9 color10">
               <div class="legend">
 		<div class="text-center">62</div>
-		<br />
+
 		<div class="text-left">80</div>
               </div>
 	    </div>
 	    <div class="picture picture10 color7">
               <div class="legend">
 		<div class="text-center">66</div>
-		<br />
+
 		<div class="text-left">85</div>
               </div>
 	    </div>
 	    <div class="picture picture11 color4">
               <div class="legend">
 		<div class="text-center">62</div>
-		<br />
+
 		<div class="text-left">80</div>
               </div>
 	    </div>
 	    <div class="picture picture12 color7">
               <div class="legend">
 		<div class="text-center">128</div>
-		<br />
+
 		<div class="text-left">85</div>
               </div>
 	    </div>
 	    <div class="picture picture13 color3">
               <div class="legend">
 		<div class="text-center">62</div>
-		<br />
+
 		<div class="text-left">80</div>
               </div>
 	    </div>
 	    <div class="picture picture14 color6">
               <div class="legend">
 		<div class="text-center">113</div>
-		<br />
+
 		<div class="text-left">75</div>
               </div>
 	    </div>
 	    <div class="picture picture15 color8">
               <div class="legend">
 		<div class="text-center">56</div>
-		<br />
+
 		<div class="text-left">85</div>
               </div>
 	    </div>
 	    <div class="picture picture16 color2">
               <div class="legend">
 		<div class="text-center">54</div>
-		<br />
+
 		<div class="text-left">70</div>
               </div>
 	    </div>
 	    <div class="picture picture17 color1">
               <div class="legend">
 		<div class="text-center">94</div>
-		<br />
+
 		<div class="text-left">70</div>
               </div>
 	    </div>
 	  </div>
-	  <div>
-	    <br />
-	  </div>
-	  <h3 class="subheader">
-	    What you just did by clicking on this button is
-	    telling <em>Pycs-Layout</em> to build rows of equal width and with
-	    a height of approximatively 70px.
-	  </h3>
-	  <div>
-	    <br />
-	  </div>
 	</div>
+
+        <div class="row">
+          <div class="small-12 column">
+	    <h3 class="subheader">
+	      What you just did by clicking on this button is
+	      telling <em>Pycs-Layout</em> to build rows of equal width and with
+	      a height of approximatively 70px.
+	    </h3>
+          </div>
+        </div>
+
 
 	<div class="row">
 	  <h2> How to use it ?</h2>
 
-	  <div class="small-12 columns panel radius">
-	    <pre>
-	      <code class="language-markup">
-&lt;body&gt;
-    ...
-
-    &lt;div class="gallery"&gt;
-        &lt;div class="picture"&gt;
-            &lt;img src="mypicture.jpg" /&gt;
-        &lt;/div&gt;
-        &lt;div class="picture"&gt;
-            &lt;img src="mypicture1.jpg" /&gt;
-        &lt;/div&gt;
-        &lt;div class="picture"&gt;
-            &lt;img src="mypicture2.jpg" /&gt;
-        &lt;/div&gt;
-        ...
-    &lt;/div&gt;
-
-    ...
-
-    &lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
-    &lt;script src="js/pycs-layout.jquery.js"&gt;&lt;/script&gt;
-
-    &lt;script&gt;
-        /* wait for the window to be loaded */
-        $(window).load( function() {
-
-            $("gallery").pycsLayout({
-              /* The class of the elements to layout */
-              pictureContainer: ".picture",
-              /* How many pixels between each pictureContainer */
-              gutter: 4,
-              /* Height of the rows */
-              idealHeight: 70,
-            });
-
-        });
-    &lt;/script&gt;
-&lt;/body&gt;
-	      </code>
-	    </pre>
+	  <div class="small-12 columns">
+	    <pre data-src="code.html"></pre>
 	  </div>
-	  <div>
-	    <br />
-	  </div>
-	  <div class="small-4 small-centered columns">
-	    <a class="button radius" href="js/pycs-layout.jquery.min.js">Download</a>
-	  </div>
-	  <div>
-	    <br />
-	  </div>
-	  <div>
-	    <br />
+        </div>
+        <div class="row">
+	  <div class="small-4 small-centered text-center columns">
+	    <a class="button radius" href="js/pycs-layout.jquery.js">Download</a>
 	  </div>
 	</div>
-
       </div>
     </main>
     <script src="js/prism.js"></script>
-    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
-    <script src="js/pycs-layout.jquery.min.js"></script>
+    <script src="js/pycs-layout.jquery.js"></script>
     <script>
      $(document).foundation();
      $(document).ready( function() {
@@ -303,7 +249,7 @@
        /* make the title disappear on scroll */
        $(window).scroll(function(){
 	 var scroll = window.pageYOffset || document.documentElement.scrollTop;
-	 var scrollMax = 170;
+	 var scrollMax = 150;
 	 if(scroll <= scrollMax){
 	   $("main header .inside h1").css("opacity", 1 - scroll / scrollMax);
 	 }

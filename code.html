@@ -1,0 +1,32 @@
+<body>
+  <div class="gallery">
+    <div class="picture">
+      <img src="mypicture.jpg" />
+    </div>
+    <div class="picture">
+      <img src="mypicture1.jpg" />
+    </div>
+    <div class="picture">
+      <img src="mypicture2.jpg" />
+    </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/pycs-layout.jquery.js"></script>
+
+  <script>
+   /* wait for the window to be loaded */
+   $(window).load( function() {
+
+       $("gallery").pycsLayout({
+           /* The class of the elements to layout */
+           pictureContainer: ".picture",
+           /* How many pixels between each pictureContainer */
+           gutter: 4,
+           /* Height of the rows */
+           idealHeight: 70,
+       });
+
+   });
+  </script>
+</body>
