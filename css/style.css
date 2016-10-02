@@ -112,7 +112,8 @@ img{
   transition: opacity 250ms;
 }
 .js img{
-  opacity: 0;
+  max-height: 500px;
+  opacity: 0.6;
 }
 .picture:hover{
   cursor: pointer;
