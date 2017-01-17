@@ -177,11 +177,13 @@
 	    /* we keep the original sizes so we can deal with the reisze event */
 	    if(imageContainer.attr("data-pycs-done") != "true"){
 		for(var i=0; i<items.length; i++){
-		    var width = parseInt($(items[i]).width());
-		    var height = parseInt($(items[i]).height());
-		    if( ! $(items[i]).attr("data-pycs-width")){
-			$(items[i]).attr("data-pycs-width", width);
-                        $(items[i]).attr("data-pycs-height", height);
+		    var $item = $(items[i]);
+		    var hasWidth = $item.attr("data-pycs-width");
+		    var width = $item.attr("data-pycs-width") || parseInt($item.width()); // reuse if already exists
+		    var height = $item.attr("data-pycs-height") || parseInt($item.height()); // reuse if already exists
+		    if( !hasWidth ){
+			$item.attr("data-pycs-width", width);
+                        $item.attr("data-pycs-height", height);
 		    }
 		}
 	    }
