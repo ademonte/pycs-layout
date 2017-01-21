@@ -1,6 +1,6 @@
 # Pycs-Layout
 
-Pycs-Layout is a [JQuery](http://www.jquery.com) plugin allowing you to distribute pictures by 
+Pycs-Layout is a [JQuery](http://www.jquery.com) plugin allowing you to distribute pictures by
 preserving their aspect-ratios and filling the maximum amount of space.
 
 It uses the [Chromatic](http://www.chromatic.io/) algorithm which is detailed on [this blog post](http://www.crispymtn.com/stories/the-algorithm-for-a-perfectly-balanced-photo-gallery).
@@ -8,7 +8,7 @@ It uses the [Chromatic](http://www.chromatic.io/) algorithm which is detailed on
 # Demo
 
 You can see a demo here:
-[Pycs-Layout demo](http://ademonte.github.io/pycs-layout/demo.html)
+[Pycs-Layout demo](http://ademonte.github.io/pycs-layout/index.html)
 
 # Usage
 
@@ -50,8 +50,8 @@ You can see a demo here:
 </body>
 ```
 
-If you already know the dimensions of the pictures, you can use the ```data-pycs-width``` and 
-```data-pycs-height``` attributes on the ```div.picture``` element to specify it. This allows you 
+If you already know the dimensions of the pictures, you can use the ```data-pycs-width``` and
+```data-pycs-height``` attributes on the ```div.picture``` element to specify it. This allows you
 to lazy-load the pictures.
 
 # Contributors
