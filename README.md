@@ -12,7 +12,7 @@ You can see a demo here:
 
 # Usage
 
-```
+```HTML
 <body>
   <div class="gallery">
     <div class="picture">
