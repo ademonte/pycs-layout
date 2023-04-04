@@ -3,7 +3,6 @@
 import random
 
 def picture(w, h, i, ci):
-
     html = """<div class="picture picture%(i)s color%(ci)s">
         <div class="legend">
             <div class="text-center">%(w)s</div>
@@ -11,6 +10,7 @@ def picture(w, h, i, ci):
             <div class="text-left">%(h)s</div>
         </div>
     </div>"""
+
     return html % {"w":w, "h":h, "i":i, "ci":ci}
 
 sizes = ["70", "75", "80", "85"]
